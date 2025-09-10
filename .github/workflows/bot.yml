@@ -3,7 +3,7 @@ name: Bot Comensales
 on:
   schedule:
     # Lunes a viernes a las 15:00 UTC = 10:00 AM Perú
-    - cron: "0 16 * * 1-5"
+    - cron: "15 17* * 1-5"
   workflow_dispatch: # Para ejecutarlo manualmente desde GitHub si quieres probar
 
 jobs:
