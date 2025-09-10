@@ -1,0 +1,23 @@
+name: Bot Comensales
+
+on:
+  schedule:
+    # Lunes a viernes a las 15:00 UTC = 10:00 AM Perú
+    - cron: "0 15 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Ejecutar bot
+        run: python bot.py
