@@ -4,8 +4,7 @@ on:
   schedule:
     # Ejecutar cada 1 minuto
     - cron: "* * * * *"
-  workflow_dispatch:
-
+    
 jobs:
   run-bot:
     runs-on: ubuntu-latest
