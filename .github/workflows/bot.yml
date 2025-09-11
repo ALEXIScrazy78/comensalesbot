@@ -4,7 +4,7 @@ on:
   schedule:
     # Lunes a viernes a las 17:45 UTC = 12:45 PM en Perú
     #- cron: "0 15 * * 1-5"
-    - cron: "30 19 * * 1-5"
+    - cron: "35 19 * * 1-5"
   workflow_dispatch: # lo dejamos para que lo pruebes manualmente
 
 jobs:
