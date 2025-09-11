@@ -4,7 +4,7 @@ on:
   schedule:
     # Lunes a viernes a las 17:45 UTC = 12:45 PM en Perú
     #- cron: "0 15 * * 1-5"
-    - cron: "35 19 * * 1-5"
+    - cron: "53 19 * * 1-5"
   workflow_dispatch: # lo dejamos para que lo pruebes manualmente
 
 jobs:
@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Mostrar hora
+        run: |
+          echo "Hora actual UTC: $(date -u)"
+          echo "Hora actual Perú: $(TZ=America/Lima date)"
       - name: Clonar repositorio
         uses: actions/checkout@v3
 
