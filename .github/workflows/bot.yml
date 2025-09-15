@@ -2,10 +2,16 @@ name: Bot Comensales
 
 on:
   schedule:
-    # Lunes a viernes a las 17:45 UTC = 12:45 PM en Perú
-    #- cron: "0 15 * * 1-5"
-    - cron: "53 19 * * 1-5"
-  workflow_dispatch: # lo dejamos para que lo pruebes manualmente
+    # Lunes a viernes a las 9:51 AM (Perú)
+    - cron: "51 14 * * 1-5"
+    # Lunes a viernes a las 9:52 AM (Perú)
+    - cron: "52 14 * * 1-5"
+    # Lunes a viernes a las 9:53 AM (Perú)
+    - cron: "53 14 * * 1-5"
+    # Lunes a viernes a las 9:54 AM (Perú)
+    - cron: "54 14 * * 1-5"
+  workflow_dispatch:
+
 
 jobs:
   run-bot:
